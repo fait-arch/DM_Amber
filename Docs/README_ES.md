@@ -1,4 +1,5 @@
-<div align="center"><b><a href="//README.md">English</a> | <a href="./Docs/README_ES.md">Español</a> </b></div>
+<div align="center"><b><a href="//README.md">English</a> | <a href="./README_ES.md">Español</a> </b></div>
+
 ![Bandera DM](/Docs/Img/BanderaDM.png)
 --
 <h2 align="center" style="border-bottom: none">OpenOpenMM and Amber's force field</h2>
@@ -14,18 +15,18 @@ Este repositorio ofrece un flujo de trabajo completo y automatizado para realiza
 
 ##  Arbol de Archivos
 
--   [HpCedia](./Installation/HpCedia)
+-   [HpCedia](../Installation/HpCedia)
 
 El objetivo es documentar el proceso de instalación, ejecución y simulación del conjunto de herramientas AmberTools24 dentro de la hipercomputadora de HpCedia *Sin GPU*. 
     -   Instalacion 
     -   Comprobación
     -   Simulación
 
--   [Ubuntu](./Installation/Ubuntu)
+-   [Ubuntu](../Installation/Ubuntu)
 
 El objetivo es documentar el proceso de instalación, ejecución y simulación del conjunto de herramientas AmberTools24 dentro de una máquina virtual con Ubuntu *Sin GPU*.
 
--   [Cluster de docker](./GoogleColab/Cluster)
+-   [Cluster de docker](../GoogleColab/Cluster)
 
 El repositorio [Making-it-rain](https://github.com/pablo-arantes/Making-it-rain?tab=readme-ov-file) es una excelente opción para ejecutarlo en Google Colab. Sin embargo, los tiempos de vida de las sesiones pueden ser un problema, ya que suelen durar un máximo de dos días, e incluso menos si usas GPU, que solo está disponible por unas horas.
 
