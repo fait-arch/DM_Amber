@@ -15,18 +15,18 @@ The project is designed to be reproducible across multiple platforms, providing 
 
 ## File Tree
 
-* [HpCedia](./Installation/HpCedia)
+* [HpCedia](./Installation/HpCedia/installAMBER_Docker.md)
 
 The goal is to document the installation, execution, and simulation process of the AmberTools24 toolkit on the HpCedia supercomputer *without GPU support*.
 -   Installation
 -   Verification
 -   Simulation
 
-* [Ubuntu](./Installation/Ubuntu)
+* [Ubuntu](./Installation/Ubuntu/installAmberUbuntu.md)
 
 The goal is to document the installation, execution, and simulation process of the AmberTools24 toolkit on a virtual machine running Ubuntu *without GPU support*.
 
-* [Docker Cluster](./GoogleColab/Cluster)
+* [Docker Cluster](./GoogleColab/Cluster/Explicacion.md)
 
 The repository [Making-it-rain](https://github.com/pablo-arantes/Making-it-rain?tab=readme-ov-file) is an excellent option for running on Google Colab. However, Colab’s session lifetimes can be problematic, as they usually last a maximum of two days—or even less if using a GPU, which is only available for a few hours.
 
@@ -34,6 +34,8 @@ What I did instead was use the [**“Connect to a local runtime”**](https://re
 This way, there’s no time limit, and you can take advantage of your system’s GPU.
 However, you’ll need to have **Docker** installed on your computer to configure it properly.
 
+* [Docker Cluster](./GoogleColab/Docker/Explicacion.md)
+This section explains how to set up a Docker container to run Amber simulations on a local machine or one server. [Oficial Documentation](https://research.google.com/colaboratory/local-runtimes.html)
 ---
 
 ## 📝 References
