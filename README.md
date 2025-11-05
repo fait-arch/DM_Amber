@@ -1,19 +1,45 @@
-# Dinámica Molecular complejo ligando-receptor amber
+<div align="center"><b><a href="./README.md">English</a> | <a href="./Docs/README_ES.md">Español</a> </b></div>
 
-En este repository de mostrar el proceso para una simulación de dinámica molecular en un complejo ligando receptor usando el conjunto de herramientas Amber24, tanto para una máquina virtual de Ubuntu como para un contenedor de Docker con Ubuntu 
+## ![DM Flag](Docs/Img/BanderaDM.png)
 
-El objetivo es documentar el proceso de instalación, ejecución y simulación del conjunto de herramientas AmberTools24 
+<h2 align="center" style="border-bottom: none">OpenOpenMM and Amber’s Force Field</h2>
 
--   Instalacion 
--   Comprobación
--   Simulación
+---
 
-##  Arbol de Archivos
+# Molecular Dynamics of a Ligand–Receptor Complex using Amber
 
+This repository provides a complete and automated workflow for performing molecular dynamics simulations of a ligand–receptor complex using the Amber24 toolkit.
+The project is designed to be reproducible across multiple platforms, providing detailed installation guides for Ubuntu as well as for high-performance computing (HPC) environments using Docker and EnRoot containers.
 
-## Referencias
+---
 
-- [Amber Installation Guide](https://ambermd.org/Installation.php)
-- [Amber 24 Documentation](https://ambermd.org/doc12/Amber24.pdf)
-- [Installing Amber on Ubuntu](https://ambermd.org/InstUbuntu.php)
-- [Installing dependencies Amber on Ubuntu](https://ambermd.org/InstUbuntu.php)
+## File Tree
+
+* [HpCedia](./Installation/HpCedia)
+
+The goal is to document the installation, execution, and simulation process of the AmberTools24 toolkit on the HpCedia supercomputer *without GPU support*.
+-   Installation
+-   Verification
+-   Simulation
+
+* [Ubuntu](./Installation/Ubuntu)
+
+The goal is to document the installation, execution, and simulation process of the AmberTools24 toolkit on a virtual machine running Ubuntu *without GPU support*.
+
+* [Docker Cluster](./GoogleColab/Cluster)
+
+The repository [Making-it-rain](https://github.com/pablo-arantes/Making-it-rain?tab=readme-ov-file) is an excellent option for running on Google Colab. However, Colab’s session lifetimes can be problematic, as they usually last a maximum of two days—or even less if using a GPU, which is only available for a few hours.
+
+What I did instead was use the [**“Connect to a local runtime”**](https://research.google.com/colaboratory/local-runtimes.html) option, which allows you to link Google Colab to your own computer’s resources.
+This way, there’s no time limit, and you can take advantage of your system’s GPU.
+However, you’ll need to have **Docker** installed on your computer to configure it properly.
+
+---
+
+## 📝 References
+
+* [Amber Installation Guide](https://ambermd.org/Installation.php)
+* [Amber 24 Documentation](https://ambermd.org/doc12/Amber24.pdf)
+* [Installing Amber on Ubuntu](https://ambermd.org/InstUbuntu.php)
+* [Installing Amber dependencies on Ubuntu](https://ambermd.org/InstUbuntu.php)
+* [Making it rain](https://github.com/pablo-arantes/Making-it-rain?tab=readme-ov-file)

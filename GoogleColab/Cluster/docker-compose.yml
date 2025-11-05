@@ -1,0 +1,110 @@
+version: '3.8'
+
+services:
+  runtime-1:
+    image: us-docker.pkg.dev/colab-images/public/runtime
+    container_name: colab-runtime-1
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9000:8080"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      # Variables críticas para Colab Runtime
+      - COLAB_JUPYTER_IP=0.0.0.0
+      - COLAB_JUPYTER_TOKEN=
+      - COLAB_JUPYTER_PASSWORD=
+      - JUPYTER_CONFIG_DIR=/root/.jupyter
+      - JUPYTER_ALLOW_INSECURE_WRITES=1
+    volumes:
+      - runtime-1-data:/content
+      - runtime-1-config:/root/.jupyter
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/api || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  runtime-2:
+    image: us-docker.pkg.dev/colab-images/public/runtime
+    container_name: colab-runtime-2
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9001:8080"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - COLAB_JUPYTER_IP=0.0.0.0
+      - COLAB_JUPYTER_TOKEN=
+      - COLAB_JUPYTER_PASSWORD=
+      - JUPYTER_CONFIG_DIR=/root/.jupyter
+      - JUPYTER_ALLOW_INSECURE_WRITES=1
+    volumes:
+      - runtime-2-data:/content
+      - runtime-2-config:/root/.jupyter
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/api || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  runtime-3:
+    image: us-docker.pkg.dev/colab-images/public/runtime
+    container_name: colab-runtime-3
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:9002:8080"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - COLAB_JUPYTER_IP=0.0.0.0
+      - COLAB_JUPYTER_TOKEN=
+      - COLAB_JUPYTER_PASSWORD=
+      - JUPYTER_CONFIG_DIR=/root/.jupyter
+      - JUPYTER_ALLOW_INSECURE_WRITES=1
+    volumes:
+      - runtime-3-data:/content
+      - runtime-3-config:/root/.jupyter
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/api || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  runtime-1-data:
+    driver: local
+  runtime-1-config:
+    driver: local
+  runtime-2-data:
+    driver: local
+  runtime-2-config:
+    driver: local
+  runtime-3-data:
+    driver: local
+  runtime-3-config:
+    driver: local
