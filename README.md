@@ -36,7 +36,19 @@ However, you’ll need to have **Docker** installed on your computer to configur
 
 * [Docker Cluster](./GoogleColab/Docker/Explicacion.md)
 This section explains how to set up a Docker container to run Amber simulations on a local machine or one server. [Oficial Documentation](https://research.google.com/colaboratory/local-runtimes.html)
+
 ---
+
+## Tabla of Contents
+
+| Actividad     | Programa                                         | Equipo        | Lenguaje         | Objetivo                                                                 |
+|---------------|--------------------------------------------------|---------------|------------------|--------------------------------------------------------------------------|
+| Entregable 1  | Script de ejecución de amber en root environment | HPC CEDIA     | Bash             | Ejecutar la simulación del proceso de DM en HPC CEDIA                    |
+| Entregable 2  | Script de ejecución de amber en VM               | Laptop        | Bash, .ova       | Exportar el código de la HPC a cualquier computador                      |
+| Entregable 3  | Script de Notebook                               | Asus Workstation | Python, Notebook | Poder ejecutar el sistema con una GPU                                    |
+| Entregable 4  | Archivo Docker Compose                           | Asus Workstation | yml              | Crear un clúster de contenedores para trabajar con compuestos simultáneamente |
+
+
 
 ## 📝 References
 
