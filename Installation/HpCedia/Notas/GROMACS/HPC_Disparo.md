@@ -28,7 +28,7 @@ watch -n 1 nvidia-smi
 ## Evidencia
 
 ### Vista sin ejecución
-![[Pasted image 20260123104416.png]]
+![[Notas/GROMACS/img/Pasted image 20260123104416.png]]
 
 ### Vista con ejecución
-![[Pasted image 20260123104724.png]]
+![[Notas/GROMACS/img/Pasted image 20260123104724.png]]
